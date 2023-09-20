@@ -1,0 +1,48 @@
+
+nav {
+    height: 84px;
+    padding: 0 50px;
+    background-color: #f8f8f8;
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.1);
+    
+
+   
+}
+
+
+.default-logo {
+    width: 100px;
+    height: 84px;
+    border-right: 1px solid #e1e1e1;
+    display: flex;
+    align-items: center;
+    border-color: #e7e7e7;
+}
+
+.default-logo img {
+    width: 38.5px;
+    height: 44px;
+}
+ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 50px;
+}
+
+ul li a {
+    font-weight: 700;
+    
+}
+
+.active {
+    color: #75c5cf !important;
+}
+
+#navbarNav span {
+    border-color: #e1e1e1;
+  
+    
+}
+
+
