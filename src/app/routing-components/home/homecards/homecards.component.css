@@ -1,10 +1,11 @@
-section {
-    margin-top: 50px;
-}
+
 
 /* header text start */
+
+
 header .header-text {
     position: relative;
+    top: 100px;
     height: 40px;
     display: flex;
     justify-content: center;
@@ -25,7 +26,7 @@ header .header-text h1 {
 header .header-text::before {
     content: "";
     width: 100%;
-    height: 2px;
+    height: 1px;
     background: grey;
     position: absolute;
     top: 15px;
@@ -34,10 +35,13 @@ header .header-text::before {
 /* header text end */
 
 /* cards start */
+section {
+    margin-top: 150px;
+}
 
 .card {
     width: 360px;
-    height: 285px;
+    height: 300px;
     overflow: hidden;
     cursor: pointer;
     box-shadow: 0px 0px 25px 5px #888787;
@@ -49,33 +53,26 @@ header .header-text::before {
 }
 
 .card:hover .card-items {
-    transform: translateY(-73%) ;
-    
-   
-
+    transform: translateY(-70%) ;
 }
-
-
 
 .card .info {
     display: flex;
     justify-content: space-between;
     font-size: 15px;
     font-weight: 500;
-
-
 }
 
 .info .card-text {
     margin-top: 10px;
-    padding-left: 10px;
+    padding: 10px 20px;
 }
 
 .info .prices {
     background-color: rgb(236, 236, 236);
     display: flex;
     flex-direction: column;
-    padding: 0px 25px;
+    padding: 10px 25px;
     position: relative;
 
 
@@ -92,7 +89,7 @@ header .header-text::before {
 .info .prices .night {
     font-size: 12px;
     position: absolute;
-    top: 20px;
+    top: 33px;
 
 }
 
@@ -109,7 +106,6 @@ header .header-text::before {
 .card-body-top button:hover {
     background-color: rgb(43, 105, 241);
 }
-
 
 
 

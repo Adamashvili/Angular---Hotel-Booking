@@ -1,9 +1,14 @@
 
 nav {
-    height: 84px;
+    height: 80px;
     padding: 0 50px;
     background-color: #f8f8f8;
     box-shadow: 0 3px 3px 0 rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100vw;
+   
     
 
    
@@ -12,7 +17,7 @@ nav {
 
 .default-logo {
     width: 100px;
-    height: 84px;
+    height: 80px;
     border-right: 1px solid #e1e1e1;
     display: flex;
     align-items: center;
@@ -37,6 +42,7 @@ ul li a {
 
 .active {
     color: #75c5cf !important;
+    text-shadow: 2px 2px #e1e1e1
 }
 
 #navbarNav span {
