@@ -14,6 +14,8 @@ import { HomecardsComponent } from './routing-components/home/homecards/homecard
 import { UspsectionComponent } from './routing-components/home/uspsection/uspsection.component';
 import { FormsModule } from '@angular/forms';
 import { NgxSliderModule } from 'ngx-slider-v2';
+import { RoomDetailsComponent } from './routing-components/rooms/room-details/room-details.component';
+import { RoomMoredetailsComponent } from './routing-components/rooms/room-details/room-moredetails/room-moredetails.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { NgxSliderModule } from 'ngx-slider-v2';
     BookedRoomsComponent,
     BannerComponent,
     HomecardsComponent,
-    UspsectionComponent
+    UspsectionComponent,
+    RoomDetailsComponent,
+    RoomMoredetailsComponent
   ],
   imports: [
     BrowserModule,
