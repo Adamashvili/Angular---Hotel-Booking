@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class BookedRoomsComponent {
 
+  table: any = [
+    {
+      id:1,
+
+    },
+    {
+      id: 2
+    },
+
+    { id:3}
+  ]
+
 }
