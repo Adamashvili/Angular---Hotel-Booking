@@ -11,10 +11,11 @@
 .cover {
     width: 630px;
     height: 200px;
-    position: absolute;
-    top: 30px;
-    right: 10%;
     color: #fff;
+    position: relative;
+    float: right;
+    right: 10px;
+    top: 20px;
     text-align: center;
     text-shadow: none;
     font-weight: 600;
@@ -87,5 +88,23 @@ ul li i {
     font-size: 19px;
     position: relative;
     top: -4px;
+
+}
+
+@media only screen and (max-width: 992px) {
+  .cover {
+  width: auto;
+  }
+
+  .cover h1 {
+    font-size: 20px;
+  }
+
+ 
+  .cover ul li i, h3 {
+    font-size: 14px;
+  }
+
+
 
 }

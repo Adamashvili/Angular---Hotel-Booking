@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class RoomMoredetailsComponent {
 
+  tab: string = "";
+
+
+  onOverViewClick() {
+    this.tab = "overview"
+  }
+  onFacilitiesClick() {
+    this.tab = "facilities"
+  }
+  onExtraClick() {
+    this.tab = "extra"
+  }
+
 }

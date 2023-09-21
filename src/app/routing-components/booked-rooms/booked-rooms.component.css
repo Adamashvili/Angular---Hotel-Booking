@@ -2,12 +2,10 @@ main {
   margin-top: 150px;
 }
 
-.card-table {
+/* .card-table {
   position: relative;
   display: flex;
   flex-direction: column;
-  min-width: none;
-  word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0 0.2);
@@ -17,33 +15,18 @@ main {
 table {
   border-collapse: separate;
   font-size: 14px;
+  
 }
 
-thead th {
-  text-shadow: 1px 1px 1px rgb(189, 187, 187);
-  color: rgb(78, 78, 78);
-  text-align: center;
-}
+
 
 tbody {
   padding: 10px;
 }
 
-table img {
-  width: 70px;
-  border-radius: 6px;
-  box-shadow: 0px 0px 5px 1px grey;
-}
 
-.status {
-  background-color: rgb(171, 171, 171);
-  text-align: center;
-  padding: 2px 8px;
-  color: white;
-  font-weight: 500;
-  border-radius: 12px;
-  box-shadow: 0px 2px 8px 2px rgb(143, 143, 143);
-}
+
+
 
 tbody td {
   padding: 8px 14px;
@@ -84,4 +67,140 @@ td button:hover {
 .noCart button:hover {
   background-color: #7ecbd5;
   box-shadow: 0px 0px 13px 4px #51a9b4;
+} */
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
 }
+
+table img {
+  width: 70px;
+  border-radius: 6px;
+  box-shadow: 0px 0px 5px 1px grey;
+}
+
+
+
+table tr {
+  
+  border: 1px solid #ddd;
+  
+  
+}
+
+
+
+thead th {
+  text-shadow: 1px 1px 1px rgb(189, 187, 187);
+  color: rgb(78, 78, 78);
+  text-align: center;
+}
+
+.status {
+  background-color: rgb(171, 171, 171);
+  text-align: center;
+  padding: 2px 8px;
+  color: white;
+  font-weight: 500;
+  border-radius: 12px;
+  box-shadow: 0px 2px 8px 2px rgb(143, 143, 143);
+}
+
+td button {
+  background-color: rgb(178, 0, 0);
+  color: white;
+  border: none;
+  padding: 6px 15px;
+  font-weight: 500;
+  border-radius: 7px;
+  box-shadow: 0px 0px 9px 2px red;
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+
+td button:hover {
+  background-color: rgb(226, 0, 0);
+  box-shadow: 0px 0px 11px 3px red;
+}
+
+@media screen and (min-width: 992px) {
+
+  
+
+  table td, th {
+    transform: scale(0.8);
+    
+  }
+  td button {
+    padding: 3px 0px;
+  }
+  
+}
+
+
+@media screen and (min-width: 768px) {
+
+ 
+  table td, th {
+    transform: scale(0.8);
+    
+  }
+  td button {
+    padding: 3px 0px;
+  }
+  
+}
+
+
+
+@media screen and (max-width: 768px) {
+  
+table {
+  border: none;
+ 
+}
+ 
+  
+  table thead {
+    display: none;
+  }
+  
+  table tr {
+    display: block;
+    margin-bottom: .625em;
+    box-shadow: 0px 1px 4px 1px grey;
+    border-radius: 6px;
+  
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: center;
+    padding: 13px 0;
+  }
+
+  .status {
+    width: 100px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  
+
+  
+
+}
+
+
+
+
+
+
+

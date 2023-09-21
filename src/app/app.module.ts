@@ -16,6 +16,9 @@ import { FormsModule } from '@angular/forms';
 import { NgxSliderModule } from 'ngx-slider-v2';
 import { RoomDetailsComponent } from './routing-components/rooms/room-details/room-details.component';
 import { RoomMoredetailsComponent } from './routing-components/rooms/room-details/room-moredetails/room-moredetails.component';
+import { OtherRoomsComponent } from './routing-components/rooms/room-details/other-rooms/other-rooms.component';
+import { NotfoundComponent } from './routing-components/notfound/notfound.component';
+
 
 
 @NgModule({
@@ -31,7 +34,10 @@ import { RoomMoredetailsComponent } from './routing-components/rooms/room-detail
     HomecardsComponent,
     UspsectionComponent,
     RoomDetailsComponent,
-    RoomMoredetailsComponent
+    RoomMoredetailsComponent,
+    OtherRoomsComponent,
+    NotfoundComponent,
+   
   ],
   imports: [
     BrowserModule,

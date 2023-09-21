@@ -108,3 +108,25 @@ label {
 .container-right button:hover {
     background-color: rgb(43, 105, 241);
 }
+
+@media only screen and (max-width: 768px) {
+
+}
+
+
+@media only screen and (max-width: 992px) {
+    .container {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .container-left {
+        width: auto;
+    }
+
+   .container-right {
+    width: auto;
+    margin: 0 auto;
+   }
+    
+}

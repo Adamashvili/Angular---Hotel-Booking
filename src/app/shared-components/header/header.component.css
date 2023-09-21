@@ -45,8 +45,11 @@ ul li a {
     text-shadow: 2px 2px #e1e1e1
 }
 
-#navbarNav span {
-    border-color: #e1e1e1;
+#navbarNav {
+    background-color: #f8f8f8;
+   
+   
+   
   
     
 }

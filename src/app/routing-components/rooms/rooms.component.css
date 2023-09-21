@@ -5,8 +5,11 @@ header {
 main {
     display: flex;
     flex-direction: column;
+
     gap: 150px;
 }
+
+
 
 .selectrooms {
     display: flex;
@@ -14,8 +17,6 @@ main {
     gap: 15px;
     
 }
-
-
 
 .selectrooms button {
     padding: 8px 15px;
@@ -37,10 +38,12 @@ main {
     top: 70px;
     box-shadow: 0px 3px 5px 2px #a6babd;
     border-radius: 8px;
-    height: 200px;
+    height: 250px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    box-sizing: border-box;
     
 }
 
@@ -97,12 +100,24 @@ ngx-slider {
     box-shadow: 0px 0px 13px 4px #51a9b4;
 }
 
+@media screen  and (max-width: 768px){
+    .bottom {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .inputboxs {
+        transform: scale(0.8);
+    }
+    
+}
 /* cards start */
 
 
 .card {
     width: 360px;
-    height: 300px;
+    height: 290px;
     overflow: hidden;
     cursor: pointer;
     box-shadow: 0px 0px 25px 5px #888787;
@@ -133,7 +148,7 @@ ngx-slider {
     background-color: rgb(236, 236, 236);
     display: flex;
     flex-direction: column;
-    padding: 10px 25px;
+    padding: 7px 25px;
     position: relative;
 
 
@@ -150,7 +165,7 @@ ngx-slider {
 .info .prices .night {
     font-size: 12px;
     position: absolute;
-    top: 33px;
+    top: 30px;
 
 }
 
