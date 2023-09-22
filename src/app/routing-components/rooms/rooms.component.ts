@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { Options } from 'ngx-slider-v2';
 import { RoomsService } from 'src/app/services/roomsApi.service';
 
@@ -33,5 +34,13 @@ export class RoomsComponent implements OnInit {
     floor: 0,
     ceil: 1000
   };
+
+  chooseRooms!:FormGroup
+
+  initForm() {
+    this.chooseRooms = new FormGroup({
+      
+    })
+  }
 
 }

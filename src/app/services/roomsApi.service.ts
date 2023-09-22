@@ -12,7 +12,7 @@ export class RoomsService {
 
 
     getRooms(): Observable<any> {
-       return this.roomApi.get(this.baseRoomUrl + "GetAll")
+       return this.roomApi.get(this.baseRoomUrl + "GetAvailableRooms")
     }
 
 

@@ -12,7 +12,7 @@ import { BookedRoomsComponent } from './routing-components/booked-rooms/booked-r
 import { BannerComponent } from './routing-components/home/banner/banner.component';
 import { HomecardsComponent } from './routing-components/home/homecards/homecards.component';
 import { UspsectionComponent } from './routing-components/home/uspsection/uspsection.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxSliderModule } from 'ngx-slider-v2';
 import { RoomDetailsComponent } from './routing-components/rooms/room-details/room-details.component';
 import { RoomMoredetailsComponent } from './routing-components/rooms/room-details/room-moredetails/room-moredetails.component';
@@ -45,7 +45,8 @@ import { HttpClientModule } from '@angular/common/http'
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    NgxSliderModule
+    NgxSliderModule,
+    ReactiveFormsModule,
     
     
     

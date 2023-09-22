@@ -29,7 +29,7 @@
                                 <td><img src="https://images.trvl-media.com/lodging/16000000/15840000/15835100/15835033/41cbdcb1.jpg?impolicy=resizecrop&rw=1200&ra=fit"
                                         alt=""></td>
                                 <td>
-                                    <p class="fw-bolder">Club Room</p>
+                                    <p class="fw-bolder">{{item.name}}</p>
                                     <p>89$</p>
                                 </td>
                                 <td>
@@ -48,7 +48,7 @@
                                 <td>
                                     <p class="fw-bolder">{{item.totalPrice | currency:"EUR":"symbol"}}</p>
                                 </td>
-                                <td><button class="cancelbtn">CANCEL BOOKING</button></td>
+                                <td><button (click)="cancelBooking(item.id)" class="cancelbtn">CANCEL BOOKING</button></td>
                             </tr>
                         </tbody>
                       </table>

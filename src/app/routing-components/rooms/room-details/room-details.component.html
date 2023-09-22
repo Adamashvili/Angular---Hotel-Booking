@@ -28,25 +28,31 @@
                         <h1>Reservation</h1>
                     </div>
                     <div class="reserv-night">
-                        <h3>{{room.name}} <span style="color: #75c5cf; font-weight: bold;">{{room.pricePerNight | currency:"EUR":"symbol"}} </span> - a night</h3>
+                        <h3>{{room?.name}} <span style="color: #75c5cf; font-weight: bold;">{{room?.pricePerNight | currency:"EUR":"symbol"}} </span> - a night</h3>
                     </div>
+                    <form [formGroup]="postForm" (ngSubmit)="postCustomRoom()">
                     <div class="inputboxs">
                         <label>Check-in  <i class="fa-solid fa-circle-info"></i></label>
-                        <input type="date" name="" id="" placeholder="Check-in">
+                        <input type="date" formControlName="checkIn" placeholder="Check-in">
+                        <p *ngIf="postForm.get('checkIn')?.errors"  class="err">Password is required!</p>
                     </div>
                     <div class="inputboxs">
                         <label>Check-out <i class="fa-solid fa-circle-info"></i> </label>
-                        <input type="date" name="" id="" placeholder="Check-ოუტ">
+                        <input type="date" formControlName="checkOut" placeholder="Check-ოუტ">
+                        <p *ngIf="postForm.get('checkOut')?.errors"  class="err">Password is required!</p>
                     </div>
                     <div class="inputboxs">
                         <label for="">Customer Name <i class="fa-solid fa-user"></i></label>
-                        <input type="text" placeholder="Please enter your name">
+                        <input type="text" formControlName="userName" placeholder="Please enter your name">
+                        <p *ngIf="postForm.get('userName')?.errors"  class="err">Password is required!</p>
                     </div>
                     <div class="inputboxs">
                         <label>Customer Tel-number <i class="fa-solid fa-phone"></i></label>
-                        <input type="text" placeholder="Please enter your phone number">
+                        <input type="text" formControlName="userPhone" placeholder="Please enter your phone number">
+                        <p *ngIf="postForm.get('userPhone')?.errors"  class="err">Password is required!</p>
                     </div>
-                    <button>Book Now</button>
+                    <button type="submit">Book Now</button>
+                </form>
 
                     
                 </div>

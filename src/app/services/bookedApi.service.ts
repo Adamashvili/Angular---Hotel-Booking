@@ -8,10 +8,18 @@ export class BookedService {
     constructor(private roomApi: HttpClient) {}
 
 
-    baseBookedUrl: string = "https://hotelbooking.webwide.ge/api/"
+    baseBookedUrl: string = "https://hotelbooking.webwide.ge/api/Booking"
 
 
     getRooms(): Observable<any> {
-       return this.roomApi.get(this.baseBookedUrl + "Booking")
+       return this.roomApi.get(this.baseBookedUrl)
+    }
+
+    postRoom(data:any): Observable<any>{
+        return this.roomApi.post(this.baseBookedUrl, data)
+    }
+
+    deleteRoom(id: any): Observable<any> {
+        return this.roomApi.delete(this.baseBookedUrl + "/" + id)
     }
 }
