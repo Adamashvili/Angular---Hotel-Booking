@@ -14,14 +14,14 @@
             <section>
                 <div class="container">
                     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
-                        <div class="col mt-5 d-flex justify-content-center" *ngFor="let items of products">
+                        <div class="col mt-5 d-flex justify-content-center" *ngFor="let items of hotels">
                             <div class="card">
                                 <div class="card-items">
-                                    <img src="https://images.trvl-media.com/lodging/16000000/15840000/15835100/15835033/cbb31f78.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium"
+                                    <img [src]="items.featuredImage"
                                         class="card-img-top" alt="...">
                                     <div class="card-body-top">
                                         <div class="info">
-                                            <p class="card-text">The biltmore Hotel Tbilisi</p>
+                                            <p class="card-text">{{items.name}}</p>
                                           
 
                                         </div>

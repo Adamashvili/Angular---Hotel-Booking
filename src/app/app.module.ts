@@ -18,6 +18,7 @@ import { RoomDetailsComponent } from './routing-components/rooms/room-details/ro
 import { RoomMoredetailsComponent } from './routing-components/rooms/room-details/room-moredetails/room-moredetails.component';
 import { OtherRoomsComponent } from './routing-components/rooms/room-details/other-rooms/other-rooms.component';
 import { NotfoundComponent } from './routing-components/notfound/notfound.component';
+import { HttpClientModule } from '@angular/common/http'
 
 
 
@@ -43,6 +44,7 @@ import { NotfoundComponent } from './routing-components/notfound/notfound.compon
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     NgxSliderModule
     
     

@@ -135,13 +135,13 @@ ngx-slider {
 .card .info {
     display: flex;
     justify-content: space-between;
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 500;
 }
 
 .info .card-text {
     margin-top: 10px;
-    padding: 10px 20px;
+    padding: 1px 20px;
 }
 
 .info .prices {

@@ -1,59 +1,9 @@
 <main>
     <ng-container>
         <div class="container">
-            <div class="card-table bg-white">
-                <div class="cart-product">
-                    <!-- <table class="table table-responsive">
-                        <thead>
-                            <tr>
-                                <th colspan="2">Hotel</th>
-                                <th colspan="2">Room</th>
-                                <th>Customer</th>
-                                <th>Status</th>
-                                <th>Check in</th>
-                                <th>Check out</th>
-                                <th>Total Price</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr *ngFor="let item of table; let i = index">
-                                <td>
-                                    <img src="https://images.trvl-media.com/lodging/16000000/15840000/15835100/15835033/41cbdcb1.jpg?impolicy=resizecrop&rw=1200&ra=fit"
-                                        alt="">
-                                </td>
-                                <td>
-                                    <p class="fw-bolder">The Biltmore Hotel Tbilisi</p>
-                                    <p>Tbilisi</p>
-                                </td>
-                                <td><img src="https://images.trvl-media.com/lodging/16000000/15840000/15835100/15835033/41cbdcb1.jpg?impolicy=resizecrop&rw=1200&ra=fit"
-                                        alt=""></td>
-                                <td>
-                                    <p class="fw-bolder">Club Room</p>
-                                    <p>89$</p>
-                                </td>
-                                <td>
-                                    <p class="fw-bolder">Name: Irakli</p>
-                                    <p>Phone: 555 55 55 55</p>
-                                </td>
-                                <td>
-                                    <p class="status">Booked</p>
-                                </td>
-                                <td>
-                                    <p class="fw-bolder">2023-09-14</p>
-                                </td>
-                                <td>
-                                    <p class="fw-bolder">2023-09-14</p>
-                                </td>
-                                <td>
-                                    <p class="fw-bolder">1414$</p>
-                                </td>
-                                <td><button>CANCEL BOOKING</button></td>
-                            </tr>
-                        </tbody>
-                    </table> -->
+            <div class="card bg-white">
+                <div class="product">
                     <table>
-
                         <thead>
                           <tr>
                             <th colspan="2">Hotel</th>
@@ -67,7 +17,7 @@
                           </tr>
                         </thead>
                         <tbody>
-                            <tr *ngFor="let item of table; let i = index">
+                            <tr *ngFor="let item of table">
                                 <td>
                                     <img src="https://images.trvl-media.com/lodging/16000000/15840000/15835100/15835033/41cbdcb1.jpg?impolicy=resizecrop&rw=1200&ra=fit"
                                         alt="">
@@ -83,20 +33,20 @@
                                     <p>89$</p>
                                 </td>
                                 <td>
-                                    <p class="fw-bolder">Name: Irakli</p>
-                                    <p>Phone: 555 55 55 55</p>
+                                    <p class="fw-bolder">Name: {{item.customerName}}</p>
+                                    <p>Phone: {{item.customerPhone}}</p>
                                 </td>
                                 <td>
                                     <p class="status">Booked</p>
                                 </td>
                                 <td>
-                                    <p class="fw-bolder">2023-09-14</p>
+                                    <p class="fw-bolder">{{(item.checkInDate).slice(0, -9)}}</p>
                                 </td>
                                 <td>
-                                    <p class="fw-bolder">2023-09-14</p>
+                                    <p class="fw-bolder">{{(item.checkOutDate.slice(0, -9))}}</p>
                                 </td>
                                 <td>
-                                    <p class="fw-bolder">1414$</p>
+                                    <p class="fw-bolder">{{item.totalPrice | currency:"EUR":"symbol"}}</p>
                                 </td>
                                 <td><button>CANCEL BOOKING</button></td>
                             </tr>
