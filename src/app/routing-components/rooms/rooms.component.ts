@@ -25,6 +25,36 @@ export class RoomsComponent implements OnInit {
 
   }
 
+  getSingleRooms() {
+    this.roomApiService.getRooms().subscribe((res) => {
+      this.rooms = res.filter((item:any) => {
+        return item.roomTypeId == 1
+      })
+    })
+    
+    
+  }
+
+  getDoubleRooms() {
+    this.roomApiService.getRooms().subscribe((res) => {
+      this.rooms = res.filter((item:any) => {
+        return item.roomTypeId == 3
+      })
+    })
+    
+    
+  }
+
+  getDeluxeRooms() {
+    this.roomApiService.getRooms().subscribe((res) => {
+      this.rooms = res.filter((item:any) => {
+        return item.roomTypeId == 2
+      })
+    })
+    
+    
+  }
+
 
 
 

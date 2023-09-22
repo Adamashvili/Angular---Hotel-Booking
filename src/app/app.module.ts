@@ -18,7 +18,8 @@ import { RoomDetailsComponent } from './routing-components/rooms/room-details/ro
 import { RoomMoredetailsComponent } from './routing-components/rooms/room-details/room-moredetails/room-moredetails.component';
 import { OtherRoomsComponent } from './routing-components/rooms/room-details/other-rooms/other-rooms.component';
 import { NotfoundComponent } from './routing-components/notfound/notfound.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { FilterRoomsComponent } from './routing-components/rooms/filter-rooms/filter-rooms.component'
 
 
 
@@ -38,6 +39,7 @@ import { HttpClientModule } from '@angular/common/http'
     RoomMoredetailsComponent,
     OtherRoomsComponent,
     NotfoundComponent,
+    FilterRoomsComponent,
    
   ],
   imports: [
