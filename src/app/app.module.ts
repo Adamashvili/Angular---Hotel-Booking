@@ -19,7 +19,7 @@ import { RoomMoredetailsComponent } from './routing-components/rooms/room-detail
 import { OtherRoomsComponent } from './routing-components/rooms/room-details/other-rooms/other-rooms.component';
 import { NotfoundComponent } from './routing-components/notfound/notfound.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FilterRoomsComponent } from './routing-components/rooms/filter-rooms/filter-rooms.component'
+
 
 
 
@@ -39,7 +39,7 @@ import { FilterRoomsComponent } from './routing-components/rooms/filter-rooms/fi
     RoomMoredetailsComponent,
     OtherRoomsComponent,
     NotfoundComponent,
-    FilterRoomsComponent,
+
    
   ],
   imports: [

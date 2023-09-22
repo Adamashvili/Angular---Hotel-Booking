@@ -1,5 +1,5 @@
 <main>
-    <ng-container>
+    <ng-container *ngIf="table.length != 0">
         <div class="container">
             <div class="card bg-white">
                 <div class="product">
@@ -57,7 +57,7 @@
         </div>
     </ng-container>
 
-    <!-- <ng-container >
+    <ng-container *ngIf="table.length == 0" >
     <div class="container noCart">
             <div class="text-center">
             <img src="../../../assets/hotel-logo_10250-628.avif" alt="">
@@ -65,5 +65,5 @@
             <button routerLink="/rooms" class="mt-4">Book Now</button>
         </div>
     </div>
-    </ng-container> -->
+    </ng-container>
 </main>
