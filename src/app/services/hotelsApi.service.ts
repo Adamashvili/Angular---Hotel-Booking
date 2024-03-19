@@ -8,7 +8,7 @@ export class HotelsService {
     constructor(private roomApi: HttpClient) {}
 
 
-    baseHotelsUrl: string = "https://hotelbooking.webwide.ge/api/Hotels/"
+    baseHotelsUrl: string = "https://hotelbooking.stepprojects.ge/api/Hotels/"
 
 
     getHotels(): Observable<any> {
