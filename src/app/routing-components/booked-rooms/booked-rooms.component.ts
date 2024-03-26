@@ -34,8 +34,8 @@ export class BookedRoomsComponent implements OnInit {
   cancelBooking(id:any) {
     return this.bookedHttpServ.deleteRoom(id).subscribe(
       {
-        next: (res) => console.log(res),
-        error:(err) => console.log(err),
+        next: (res) => alert(res),
+        error:(err) => alert(err.error),
         
         
       }

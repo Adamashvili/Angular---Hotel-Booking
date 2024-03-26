@@ -20,6 +20,6 @@ export class BookedService {
     }
 
     deleteRoom(id: any): Observable<any> {
-        return this.roomApi.delete(this.baseBookedUrl + "/" + id)
+        return this.roomApi.delete(this.baseBookedUrl + "/" + id, {responseType: "text"})
     }
 }
