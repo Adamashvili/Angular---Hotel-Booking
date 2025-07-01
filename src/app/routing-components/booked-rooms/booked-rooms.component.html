@@ -1,4 +1,4 @@
-<main>
+<!-- <main>
   @if (table.length != 0) {
     <div class="container">
       <div class="card bg-white">
@@ -61,4 +61,57 @@
         </div>
       </div>
     }
-  </main>
+  </main> -->
+  <div class="container">
+<ul>
+  @for (item of bookedList; track $index) {
+
+  <li>
+    @if (item.checkInDate >= item.checkOutDate || item.totalPrice <= 300) { <span class="wrong">Wrong BOOKING</span> }
+    <div class="hotelArea">
+      <img
+        src="https://images.trvl-media.com/lodging/{{item.hotelId == 1 ? '16000000/15840000/15835100/15835033/41cbdcb1': item.hotelId == 2 ? '1000000/920000/916400/916376/3e65a896' : '3000000/2620000/2614700/2614694/84d23097'}}.jpg?impolicy=resizecrop&rw=1200&ra=fit"
+        alt=""
+      />
+      <div class="hotelInfo">
+        <h3>{{item.hotelId == 1 ? 'The Biltmore Hotel Tbilisi' : item.hotelId == 2 ? 'Courtyard by Marriott Tbilisi' : 'Radisson Blu Iveria Hotel Tbilisi'}}</h3>
+        <p>Tbilisi</p>
+      </div>
+    </div>
+    <div class="RoomArea">
+      <img
+        width="20"
+        [src]="item.image"
+        alt=""
+      />
+      <div class="roomInfo">
+        <h3>{{item.room}}</h3>
+        <p>$ {{item.pricePerNight}}</p>
+      </div>
+    </div>
+    <div class="customerArea">
+      <h3>Customer: <span class="cName">{{item.customerName}}</span> </h3>
+      <p>Phone: {{item.customerPhone}}</p>
+    </div>
+    <div class="confirmed">
+@if (item.isConfirmed) { <h5>Booked</h5> }
+    </div>
+    
+    <div class="checkArea">
+      <h3>Check In</h3>
+      <p>{{item.checkInDate | date }}</p>
+    </div>
+    <div class="checkArea">
+      <h3>Check Out</h3>
+     <p>{{item.checkOutDate | date }}</p>
+    </div>
+    <div class="totalArea">
+      <h3>Total Price</h3>
+      <p [style.color]="item.totalPrice <= 300 ? 'darkred' : ''">$ {{item.totalPrice}}</p>
+    </div>
+    <button (click)="cancelBooking(item.id)" [disabled]="item.checkInDate >= item.checkOutDate || item.totalPrice <= 300">CANCEL BOOKING</button>
+  </li>
+
+  }
+</ul>
+</div>
