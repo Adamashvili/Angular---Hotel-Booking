@@ -17,39 +17,29 @@ import { RoomDetailsComponent } from './routing-components/rooms/room-details/ro
 import { RoomMoredetailsComponent } from './routing-components/rooms/room-details/room-moredetails/room-moredetails.component';
 import { OtherRoomsComponent } from './routing-components/rooms/room-details/other-rooms/other-rooms.component';
 import { NotfoundComponent } from './routing-components/notfound/notfound.component';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 
 
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    HomeComponent,
-    RoomsComponent,
-    HotelsComponent,
-    BookedRoomsComponent,
-    BannerComponent,
-    HomecardsComponent,
-    UspsectionComponent,
-    RoomDetailsComponent,
-    RoomMoredetailsComponent,
-    OtherRoomsComponent,
-    NotfoundComponent,
-
-   
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HeaderComponent,
+        FooterComponent,
+        HomeComponent,
+        RoomsComponent,
+        HotelsComponent,
+        BookedRoomsComponent,
+        BannerComponent,
+        HomecardsComponent,
+        UspsectionComponent,
+        RoomDetailsComponent,
+        RoomMoredetailsComponent,
+        OtherRoomsComponent,
+        NotfoundComponent,
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        ReactiveFormsModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
