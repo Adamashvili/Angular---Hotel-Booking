@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-other-rooms',
-  templateUrl: './other-rooms.component.html',
-  styleUrls: ['./other-rooms.component.css']
+    selector: 'app-other-rooms',
+    templateUrl: './other-rooms.component.html',
+    styleUrls: ['./other-rooms.component.css'],
+    standalone: false
 })
 export class OtherRoomsComponent {
 

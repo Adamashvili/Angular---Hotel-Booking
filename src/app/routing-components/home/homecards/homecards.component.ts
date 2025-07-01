@@ -4,9 +4,10 @@ import { Component } from '@angular/core';
 import { RoomsService } from 'src/app/services/roomsApi.service';
 
 @Component({
-  selector: 'app-homecards',
-  templateUrl: './homecards.component.html',
-  styleUrls: ['./homecards.component.css']
+    selector: 'app-homecards',
+    templateUrl: './homecards.component.html',
+    styleUrls: ['./homecards.component.css'],
+    standalone: false
 })
 export class HomecardsComponent {
 

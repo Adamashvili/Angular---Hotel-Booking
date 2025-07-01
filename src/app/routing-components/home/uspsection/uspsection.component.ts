@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-uspsection',
-  templateUrl: './uspsection.component.html',
-  styleUrls: ['./uspsection.component.css']
+    selector: 'app-uspsection',
+    templateUrl: './uspsection.component.html',
+    styleUrls: ['./uspsection.component.css'],
+    standalone: false
 })
 export class UspsectionComponent {
 

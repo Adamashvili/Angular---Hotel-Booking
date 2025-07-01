@@ -5,9 +5,10 @@ import { BookedService } from 'src/app/services/bookedApi.service';
 import { RoomsService } from 'src/app/services/roomsApi.service';
 
 @Component({
-  selector: 'app-room-details',
-  templateUrl: './room-details.component.html',
-  styleUrls: ['./room-details.component.css']
+    selector: 'app-room-details',
+    templateUrl: './room-details.component.html',
+    styleUrls: ['./room-details.component.css'],
+    standalone: false
 })
 export class RoomDetailsComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute, private roomsApi: RoomsService, private bookedApi: BookedService) { }

@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { RoomsService } from 'src/app/services/roomsApi.service';
 
 @Component({
-  selector: 'app-rooms',
-  templateUrl: './rooms.component.html',
-  styleUrls: ['./rooms.component.css']
+    selector: 'app-rooms',
+    templateUrl: './rooms.component.html',
+    styleUrls: ['./rooms.component.css'],
+    standalone: false
 })
 export class RoomsComponent implements OnInit {
   constructor(private roomApiService: RoomsService) { }

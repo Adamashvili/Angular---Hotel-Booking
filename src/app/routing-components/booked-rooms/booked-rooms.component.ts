@@ -4,9 +4,10 @@ import { BookedService } from 'src/app/services/bookedApi.service';
 import { HotelsService } from 'src/app/services/hotelsApi.service';
 
 @Component({
-  selector: 'app-booked-rooms',
-  templateUrl: './booked-rooms.component.html',
-  styleUrls: ['./booked-rooms.component.css']
+    selector: 'app-booked-rooms',
+    templateUrl: './booked-rooms.component.html',
+    styleUrls: ['./booked-rooms.component.css'],
+    standalone: false
 })
 export class BookedRoomsComponent implements OnInit {
   constructor (private bookedHttpServ: BookedService, private hotel: HotelsService ) {}
