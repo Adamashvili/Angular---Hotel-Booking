@@ -1,0 +1,114 @@
+section {
+
+    padding: 20px;
+    box-shadow: 0 2px 4px rgb(216, 216, 216);
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    min-height:250px;
+    margin-top: 90px;
+    
+}
+
+
+.container .hotelIMG {
+    height: 250px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgb(154, 153, 153);
+    transition: 1s;
+}
+
+.container .hotelIMG:hover {
+    transform: rotate(1deg);
+}
+
+.container .hotelInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.hotelInfo h1 {
+    font-family: "Rancho", cursive;
+    font-size: 50px;
+    text-shadow: 0 0 3px grey;
+}
+
+.hotelInfo h3, .hotelInfo h6 {
+    font-family: "Felipa", serif;
+    font-weight: bold;
+    color: rgb(82, 78, 78);
+}
+
+
+.card {
+    width: 360px;
+    height: 290px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px  #bdbdbd;
+}
+
+.card-items {
+    width: 100%;
+    transition: 0.5s all ease;
+}
+
+.card:hover .card-items {
+    transform: translateY(-70%) ;
+}
+
+.card .info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.info .card-text {
+    margin-top: 10px;
+    padding: 1px 20px;
+}
+
+.info .prices {
+    background-color: rgb(236, 236, 236);
+    display: flex;
+    flex-direction: column;
+    padding: 7px 25px;
+    position: relative;
+
+
+}
+
+.info .prices .price {
+    font-weight: 600;
+    color: #75c5cf;
+    font-size: 18px;
+    letter-spacing: 1px;
+
+}
+
+.info .prices .night {
+    font-size: 12px;
+    position: absolute;
+    top: 30px;
+
+}
+
+.card-body-top button {
+    width: 100%;
+    font-weight: bold;
+    padding: 10px 0;
+    border: none;
+    background-color: darkblue;
+    color: white;
+    transition: 0.2s all ease;
+}
+
+.card-body-top button:hover {
+    background-color: rgb(43, 105, 241);
+}

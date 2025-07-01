@@ -15,8 +15,12 @@ export class RoomsService {
        return this.roomApi.get(this.baseRoomUrl + "GetAvailableRooms")
     }
 
+    getHotelRooms(id: number) {
+        return this.roomApi.get(`https://hotelbooking.stepprojects.ge/api/Hotels/GetHotel/${id}`)
+    }
 
-    // getFavRooms(): Observable<any> {
-    //     return this.roomApi.get(this.baseRoomUrl + "GetAll").pipe(filter)
-    //  }
+    filteredRooms(body:any) {
+        return this.roomApi.post("https://hotelbooking.stepprojects.ge/api/Rooms/GetFiltered", body)
+    }
+
 }

@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-*{
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Felipa&display=swap');*{
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
@@ -8,14 +9,14 @@
 .mainbtn {
     padding: 7px 25px;
     border: none;
-    background-color: #51a9b4;
-    box-shadow: 0px 0px 12px 4px #a6babd;
+    background-color: darkblue;
+    box-shadow: 0px 0px 5px  #a6babd;
     border-radius: 8px;
     color: white;
     font-weight: 600;
     transition: 0.2s all ease;
 }
 .mainbtn:hover {
-    background-color: #7ecbd5;
-    box-shadow: 0px 0px 13px 4px #51a9b4;
+    background-color: rgb(1, 1, 187);
+    box-shadow: 0px 0px 7px  darkblue;
 }
