@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
-import { Options } from 'ngx-slider-v2';
 import { RoomsService } from 'src/app/services/roomsApi.service';
 
 @Component({
