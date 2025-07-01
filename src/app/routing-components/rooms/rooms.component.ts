@@ -58,19 +58,7 @@ export class RoomsComponent implements OnInit {
 
 
 
-  value: number = 300;
-  highValue: number = 1000;
-  options: Options = {
-    floor: 0,
-    ceil: 1000
-  };
 
-  chooseRooms!:FormGroup
 
-  initForm() {
-    this.chooseRooms = new FormGroup({
-      
-    })
-  }
 
 }
