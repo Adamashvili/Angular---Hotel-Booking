@@ -44,7 +44,7 @@ section {
     height: 290px;
     overflow: hidden;
     cursor: pointer;
-    box-shadow: 0px 0px 25px 5px #888787;
+    box-shadow: 0px 0px  5px #888787;
 }
 
 .card-items {

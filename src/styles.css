@@ -1,6 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Felipa&display=swap');*{
+@import url('https://fonts.googleapis.com/css2?family=Felipa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap');
+
+*{
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
