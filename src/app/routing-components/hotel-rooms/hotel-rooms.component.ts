@@ -12,6 +12,7 @@ import { RoomsService } from 'src/app/services/roomsApi.service';
 export class HotelRoomsComponent {
   constructor(public actR: ActivatedRoute, private serv: RoomsService) {
     this.getHotelRooms()
+    window.scrollTo(0, 0)
   }
 
   protected hotelInfo: any = []

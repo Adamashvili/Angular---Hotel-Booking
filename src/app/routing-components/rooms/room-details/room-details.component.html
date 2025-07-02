@@ -2,21 +2,38 @@
   <section>
     <div class="container">
       <div class="container-left">
-        <button routerLink="/rooms" class="mainbtn"> &larr; Back</button>
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <button routerLink="/rooms" class="mainbtn">&larr; Back</button>
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img [src]="room?.images[imageId]?.source"
-                class="d-block w-100" alt="...">
+              <img
+                [src]="room?.images[imageId]?.source"
+                class="d-block w-100"
+                alt="..."
+              />
             </div>
           </div>
-          <button (click)="backImg()" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev">
+          <button
+            (click)="backImg()"
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button (click)="nextImg()"  class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next">
+          <button
+            (click)="nextImg()"
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
@@ -28,45 +45,92 @@
             <h1>Reservation</h1>
           </div>
           <div class="reserv-night">
-            <h3>{{room?.name}} <span style="color: #75c5cf; font-weight: bold;">{{room?.pricePerNight | currency:"EUR":"symbol"}} </span> - a night</h3>
+            <h3>
+              {{ room?.name }}
+              <span style="color: #75c5cf; font-weight: bold"
+                >{{ room?.pricePerNight | currency : "EUR" : "symbol" }}
+              </span>
+              - a night
+            </h3>
           </div>
           <form [formGroup]="postForm" (ngSubmit)="postCustomRoom()">
             <div class="inputboxs">
-              <label>Check-in  <i class="fa-solid fa-circle-info"></i></label>
-              <input type="date" formControlName="checkIn" placeholder="Check-in">
-              @if (postForm.get('checkIn')?.errors) {
-                <p  class="err">Password is required!</p>
+              <label>Check-in <i class="fa-solid fa-circle-info"></i></label>
+              <input
+                type="date"
+                formControlName="checkInDate"
+                placeholder="Check In"
+              />
+              @if (postForm.get('checkInDate')?.dirty &&
+              postForm.get('checkInDate')?.invalid) {
+              <p class="err">Choose Check In Date</p>
+              } @else if ((postForm.value.checkIn >= postForm.value.checkOut) &&
+              (postForm.controls["checkInDate"].dirty &&
+              postForm.controls["checkInDate"].dirty) ) {
+              <p class="err">Check In Date can`t be in past</p>
               }
             </div>
             <div class="inputboxs">
               <label>Check-out <i class="fa-solid fa-circle-info"></i> </label>
-              <input type="date" formControlName="checkOut" placeholder="Check-ოუტ">
-              @if (postForm.get('checkOut')?.errors) {
-                <p  class="err">Password is required!</p>
+              <input
+                type="date"
+                formControlName="checkOutDate"
+                placeholder="Check Out"
+              />
+              @if (postForm.get('checkOutDate')?.dirty &&
+              postForm.get('checkOutDate')?.invalid) {
+              <p class="err">Choose Check Out Date</p>
               }
             </div>
             <div class="inputboxs">
-              <label for="">Customer Name <i class="fa-solid fa-user"></i></label>
-              <input type="text" formControlName="userName" placeholder="Please enter your name">
-              @if (postForm.get('userName')?.errors) {
-                <p  class="err">Password is required!</p>
+              <label for=""
+                >Customer Name <i class="fa-solid fa-user"></i
+              ></label>
+              <input
+                type="text"
+                formControlName="customerName"
+                placeholder="Please enter your name"
+              />
+              @if (postForm.get('customerName')?.dirty &&
+              postForm.get('customerName')?.invalid) {
+              <p class="err">Enter Your Name</p>
               }
             </div>
             <div class="inputboxs">
-              <label>Customer Tel-number <i class="fa-solid fa-phone"></i></label>
-              <input type="text" formControlName="userPhone" placeholder="Please enter your phone number">
-              @if (postForm.get('userPhone')?.errors) {
-                <p  class="err">Password is required!</p>
+              <label
+                >Customer Tel-number <i class="fa-solid fa-phone"></i
+              ></label>
+              <input
+                type="text"
+                formControlName="customerPhone"
+                placeholder="Please enter your phone number"
+              />
+              @if (postForm.get('customerPhone')?.dirty &&
+              postForm.get('customerPhone')?.invalid) {
+              <p class="err">Enter Your Phone</p>
               }
             </div>
-            <button type="submit">Book Now</button>
+            <button
+              [disabled]="
+                postForm.invalid ||
+                postForm.value.checkIn >= postForm.value.checkOut
+              "
+              type="submit"
+            >
+              Book Now
+            </button>
           </form>
-
-
         </div>
       </div>
     </div>
   </section>
 </main>
+
+<div #bookSMSArea class="bookSMSArea">
+  <div class="bookDiv">
+    <img [src]="afterPostIMG" alt="">
+    <h1>{{afterPostSMS}}</h1>
+  </div>
+</div>
 
 <app-room-moredetails></app-room-moredetails>

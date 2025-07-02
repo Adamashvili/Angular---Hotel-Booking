@@ -16,7 +16,7 @@ export class BookedService {
     }
 
     postRoom(data:any): Observable<any>{
-        return this.roomApi.post(this.baseBookedUrl, data)
+        return this.roomApi.post(this.baseBookedUrl, data , {responseType: "text"})
     }
 
     deleteRoom(id: any): Observable<any> {

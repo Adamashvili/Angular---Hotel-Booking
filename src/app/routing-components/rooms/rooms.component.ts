@@ -9,7 +9,7 @@ import { RoomsService } from 'src/app/services/roomsApi.service';
   standalone: false,
 })
 export class RoomsComponent implements OnInit {
-  constructor(private roomApiService: RoomsService) {}
+  constructor(private roomApiService: RoomsService) { }
   rooms: any = [];
   protected filterForm: FormGroup = new FormGroup({
     roomTypeId: new FormControl(),
@@ -22,6 +22,7 @@ export class RoomsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAllRooms();
+    window.scrollTo(0, 0)
   }
 
   getAllRooms() {

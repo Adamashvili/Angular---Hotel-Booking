@@ -1,10 +1,43 @@
 footer {
-    margin-top: 450px;
-    background-color: #272727;
-    height: 74px;
-    color: white;
-    display: flex;
-    align-items: center;
-    font-size: 12px;
+  margin-top: 450px;
+  background-color: #272727;
+  height: 74px;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
 
+.topMark {
+  position: fixed;
+  bottom: -60px;
+  right: 60px;
+  background-color: darkblue;
+  color: white;
+  box-shadow: 0 0 5px 1px white;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.showMark {
+  opacity: 0.9;
+  bottom: 40px;
+}
+
+.fa-arrow-up {
+  text-shadow: 0 0 5px white;
+  font-size: 20px;
+  transition: 0.4s;
+}
+
+.topMark:hover .fa-arrow-up {
+  font-size: 23px;
+  transform: translateY(-5px);
 }
