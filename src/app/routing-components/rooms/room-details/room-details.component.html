@@ -64,9 +64,9 @@
               @if (postForm.get('checkInDate')?.dirty &&
               postForm.get('checkInDate')?.invalid) {
               <p class="err">Choose Check In Date</p>
-              } @else if ((postForm.value.checkIn >= postForm.value.checkOut) &&
+              } @else if ((postForm.value.checkInDate >= postForm.value.checkOutDate) &&
               (postForm.controls["checkInDate"].dirty &&
-              postForm.controls["checkInDate"].dirty) ) {
+              postForm.controls["checkOutDate"].dirty) ) {
               <p class="err">Check In Date can`t be in past</p>
               }
             </div>
@@ -113,7 +113,7 @@
             <button
               [disabled]="
                 postForm.invalid ||
-                postForm.value.checkIn >= postForm.value.checkOut
+                postForm.value.checkInDate >= postForm.value.checkOutDate
               "
               type="submit"
             >
