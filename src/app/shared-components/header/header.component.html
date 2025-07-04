@@ -1,27 +1,48 @@
-<nav class="navbar navbar-expand-lg">
-    <div class="container">
-        <div class="default-logo">
-            <img routerLink="/" src="../../../assets/step.png" alt="">
-        </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]='{exact: true}'>Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/rooms" routerLinkActive="active">Rooms</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/hotels" routerLinkActive="active">Hotels</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/bookedrooms" routerLinkActive="active">Booked Rooms</a>
-                </li>
-            </ul>
-        </div>
-    </div>
+<nav appNavScrolling>
+  <div class="logo">
+    <img routerLink="/" src="../../../assets/step.png" alt="" />
+    <h1>STEP - Hotel Booking</h1>
+  </div>
+  <ul>
+    <li
+      routerLinkActive="onActive"
+      [routerLinkActiveOptions]="{ exact: true }"
+      routerLink="/"
+    >
+      Home
+    </li>
+    <li routerLinkActive="onActive" routerLink="/rooms">Rooms</li>
+    <li routerLinkActive="onActive" routerLink="/hotels">Hotels</li>
+    <li routerLinkActive="onActive" routerLink="/bookedrooms">Bookings</li>
+  </ul>
+  <div class="icons">
+    <i class="fa-brands fa-facebook"></i>
+    <i class="fa-brands fa-instagram"></i>
+    <i class="fa-brands fa-twitter"></i>
+    <i class="fa-brands fa-whatsapp"></i>
+  </div>
+
+  <i (click)="toggleNav()" class="fa-solid fa-{{isMobileNavShown ? 'x' : 'bars'}}"></i>
 </nav>
+
+<ul class="mobile {{isMobileNavShown ? 'mobileToggle' : ''}}">
+  <li
+    routerLinkActive="onActive"
+    [routerLinkActiveOptions]="{ exact: true }"
+    routerLink="/"
+  >
+    Home
+  </li>
+  <li routerLinkActive="onActive" routerLink="/rooms">Rooms</li>
+  <li routerLinkActive="onActive" routerLink="/hotels">Hotels</li>
+  <li routerLinkActive="onActive" routerLink="/bookedrooms">Bookings</li>
+  <li>
+    <div class="icons">
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-whatsapp"></i>
+    </div>
+  </li>
+</ul>
+

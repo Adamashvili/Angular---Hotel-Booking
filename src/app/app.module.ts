@@ -21,6 +21,7 @@ import {
   withInterceptorsFromDi,
 } from '@angular/common/http';
 import { ScrollTopDirective } from './directives/scroll-top.directive';
+import { NavScrollingDirective } from './directives/nav-scrolling.directive';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { ScrollTopDirective } from './directives/scroll-top.directive';
     ReactiveFormsModule,
     ReactiveFormsModule,
     ScrollTopDirective,
+    NavScrollingDirective
   ],
   providers: [provideHttpClient(withInterceptorsFromDi())],
 })

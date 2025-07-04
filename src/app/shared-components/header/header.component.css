@@ -1,42 +1,209 @@
+
 nav {
-  height: 80px;
-  padding: 0 50px;
-  background-color: transparent;
- 
+  display: grid;
+  grid-template-columns: 1.5fr 5fr 1fr;
+  align-items: center;
+  height: 70px;
+  padding-inline: 50px;
+  background-color: transparent !important;
   position: fixed;
   top: 0;
-  z-index: 99999;
   width: 100%;
+  z-index: 99999;
   backdrop-filter: blur(10px) brightness(90%);
+  transition: 1s;
 }
-
-.default-logo {
-  width: 100px;
-  height: 80px;
-  border-right: 1px solid #0f0f0f5f;
+.mobile {
+  position: fixed;
+  top: 70px;
+  left: -100%;
+  z-index: 99999999999;
+  width: 50%;
+  height: calc(100vh - 70px);
+  backdrop-filter: blur(8px) brightness(87%);
   display: flex;
-  align-items: center;
-
+  flex-direction: column;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 20px;
+  transition: 0.5s ease-in;
 }
 
-.default-logo img {
-  width: 38.5px;
-  height: 44px;
+.mobileToggle {
+  left: 0 !important;
 }
-ul {
+
+.mobile li {
+  background-color: darkblue;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-family: "Trade Winds", system-ui;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.mobile li:hover:not(:last-child) {
+  background-color: rgb(12, 12, 156);
+}
+
+.mobile li:last-child {
+  background-color: transparent;
+}
+
+.mobile li.onActive {
+  color: black !important;
+  text-shadow: none;
+}
+
+.mobile .icons {
   display: flex;
   justify-content: center;
+  gap: 20px !important;
+}
+
+.navOnScroll {
+  background-color: white !important;
+  backdrop-filter: none;
+  box-shadow: 0 2px 5px rgb(234, 233, 233);
+  transition: 1s;
+}
+
+.navOnScroll .onActive {
+  color: darkblue !important;
+  text-shadow: 0 0 1px darkblue;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
   gap: 20px;
-  padding: 0 50px;
-  background-color: transparent !important;
+  height: 100%;
 }
 
-ul li a {
-  font-weight: 700;
+.logo img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 10% / 30%;
 }
 
-.active {
-  color: black !important;
-  text-shadow: 0px 0px 2px black;
+.logo h1 {
+  font-size: 16px;
+  font-family: "Trade Winds", system-ui;
+  font-size: 20px;
+  color: black;
+  text-shadow: 0 0 2px white;
 }
 
+nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 30px;
+  height: 100%;
+  margin: 0;
+  color: black;
+}
+
+nav ul li {
+  font-family: "Trade Winds", system-ui;
+  cursor: pointer;
+  text-shadow: 0 0 2px white;
+}
+
+.onActive {
+  color: darkblue !important;
+  text-shadow: 0 0 2px white;
+}
+
+nav .icons {
+  display: flex;
+  gap: 15px;
+}
+
+.icons i {
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+  color: black;
+}
+
+.icons i:nth-child(1):hover {
+  color: #4267b2;
+}
+.icons i:nth-child(2):hover {
+  color: #fd1d1d;
+}
+.icons i:nth-child(3):hover {
+  color: #1da1f2;
+}
+.icons i:nth-child(4):hover {
+  color: #25d366;
+}
+
+.fa-bars,
+.fa-x {
+  display: none !important;
+  font-size: 20px;
+  background-color: darkblue;
+  color: white;
+  width: 40px;
+  height: 40px;
+
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.fa-bars:hover {
+  background-color: rgb(6, 6, 152);
+}
+
+@media screen and (max-width: 850px) {
+  nav {
+    grid-template-columns: 2fr 4fr 1fr;
+  }
+
+  .logo h1 {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    padding-inline: 20px;
+  }
+  nav .icons {
+    gap: 5px;
+  }
+
+  nav .icons i {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 701px) {
+  .mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  nav {
+    display: flex;
+    justify-content: space-between !important;
+  }
+  nav ul,
+  nav .icons {
+    display: none;
+  }
+
+  .fa-bars,
+  .fa-x {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+}

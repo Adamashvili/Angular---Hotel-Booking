@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+    isMobileNavShown: boolean = false
+
+    toggleNav() {
+        this.isMobileNavShown = !this.isMobileNavShown
+    }
 }

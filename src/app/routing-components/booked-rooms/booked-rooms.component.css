@@ -101,7 +101,7 @@ h5 {
 }
 
 button {
-   height: 40px;
+   min-height: 40px;
    font-family: "Trade Winds", system-ui;
    border: none;
    background-color: darkred;
@@ -121,3 +121,23 @@ button:hover {
   box-shadow: none;
   background-color: rgb(177, 3, 3);
 }
+
+
+
+
+@media screen and (max-width: 992px) {
+  li {
+    grid-template-columns: 3fr 3fr 3fr;
+  }
+  li button {
+    grid-column: span 2;
+  }
+}
+@media screen and (max-width: 500px) {
+  li {
+    grid-template-columns: 3fr 2fr ;
+  }
+ 
+}
+
+
