@@ -2,9 +2,9 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Observable } from 'rxjs';
-import { BookedService } from 'src/app/services/bookedApi.service';
-import { HotelsService } from 'src/app/services/hotelsApi.service';
-import { RoomsService } from 'src/app/services/roomsApi.service';
+import { BookedService } from '../../services/bookedApi.service';
+import { RoomsService } from '../../services/roomsApi.service';
+
 
 @Component({
   selector: 'app-booked-rooms',

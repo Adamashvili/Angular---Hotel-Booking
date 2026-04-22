@@ -4,9 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared-components/header/header.component';
 import { FooterComponent } from './shared-components/footer/footer.component';
-import { HomeComponent } from './routing-components/home/home.component';
-import { RoomsComponent } from './routing-components/rooms/rooms.component';
-import { BannerComponent } from './routing-components/home/banner/banner.component';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OtherRoomsComponent } from './routing-components/rooms/room-details/other-rooms/other-rooms.component';
 import { NotfoundComponent } from './routing-components/notfound/notfound.component';
@@ -16,17 +14,13 @@ import {
 } from '@angular/common/http';
 import { ScrollTopDirective } from './directives/scroll-top.directive';
 import { NavScrollingDirective } from './directives/nav-scrolling.directive';
-import { HotelsComponent } from "./routing-components/hotels/hotels.component";
+import { HotelsComponent } from './routing-components/hotels/hotels.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent,
-    RoomsComponent,
-
-    BannerComponent,
 
     OtherRoomsComponent,
     NotfoundComponent,
@@ -40,8 +34,8 @@ import { HotelsComponent } from "./routing-components/hotels/hotels.component";
     ReactiveFormsModule,
     ScrollTopDirective,
     NavScrollingDirective,
-    HotelsComponent
-],
+    HotelsComponent,
+  ],
   providers: [provideHttpClient(withInterceptorsFromDi())],
 })
 export class AppModule {}

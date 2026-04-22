@@ -2,8 +2,9 @@ import { CommonModule } from '@angular/common';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import { BookedService } from 'src/app/services/bookedApi.service';
-import { RoomsService } from 'src/app/services/roomsApi.service';
+import { RoomsService } from '../../../services/roomsApi.service';
+import { BookedService } from '../../../services/bookedApi.service';
+
 
 @Component({
   selector: 'app-room-details',
@@ -40,7 +41,7 @@ export class RoomDetailsComponent implements OnInit {
 
   detailedRoom() {
     this.roomId = this.activatedRoute.snapshot.paramMap.get('id');
-    this.roomsApi.getRooms().subscribe((res) => {
+    this.roomsApi.getRooms().subscribe((res:any) => {
       this.room = res.find((item: any) => item.id == this.roomId);
       console.log(this.room.images.length);
     });

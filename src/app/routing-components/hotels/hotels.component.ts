@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { HotelsService } from 'src/app/services/hotelsApi.service';
+import { HotelsService } from '../../services/hotelsApi.service';
+
 
 @Component({
     selector: 'app-hotels',

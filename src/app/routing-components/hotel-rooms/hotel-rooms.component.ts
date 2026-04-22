@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Params, RouterModule } from '@angular/router';
-import { RoomsService } from 'src/app/services/roomsApi.service';
+import { RoomsService } from '../../services/roomsApi.service';
+
 
 @Component({
   selector: 'app-hotel-rooms',
