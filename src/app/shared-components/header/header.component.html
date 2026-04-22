@@ -1,48 +1,12 @@
-<nav appNavScrolling>
-  <div class="logo">
-    <img routerLink="/" src="../../../assets/hotel-logo_10250-628.avif" alt="" />
-    <h1>Hotel Booking</h1>
+<nav>
+  <div class="left">
+    <h2>Hotel Booking</h2>
+    <ul>
+      <li (click)="scrollTo('hotels-section')" routerLink="/">Hotels</li>
+      <li (click)="scrollTo('experiences')" routerLink="/">Services</li>
+      <li (click)="scrollTo('about')" routerLink="/">About</li>
+      <li routerLink="/bookedrooms">Booked Rooms</li>
+    </ul>
   </div>
-  <ul>
-    <li
-      routerLinkActive="onActive"
-      [routerLinkActiveOptions]="{ exact: true }"
-      routerLink="/"
-    >
-      Home
-    </li>
-    <li routerLinkActive="onActive" routerLink="/rooms">Rooms</li>
-    <li routerLinkActive="onActive" routerLink="/hotels">Hotels</li>
-    <li routerLinkActive="onActive" routerLink="/bookedrooms">Bookings</li>
-  </ul>
-  <div class="icons">
-    <i class="fa-brands fa-facebook"></i>
-    <i class="fa-brands fa-instagram"></i>
-    <i class="fa-brands fa-twitter"></i>
-    <i class="fa-brands fa-whatsapp"></i>
-  </div>
-
-  <i (click)="toggleNav()" class="fa-solid fa-{{isMobileNavShown ? 'x' : 'bars'}}"></i>
+  <button>Contact Now</button>
 </nav>
-
-<ul class="mobile {{isMobileNavShown ? 'mobileToggle' : ''}}">
-  <li
-    routerLinkActive="onActive"
-    [routerLinkActiveOptions]="{ exact: true }"
-    routerLink="/"
-  >
-    Home
-  </li>
-  <li routerLinkActive="onActive" routerLink="/rooms">Rooms</li>
-  <li routerLinkActive="onActive" routerLink="/hotels">Hotels</li>
-  <li routerLinkActive="onActive" routerLink="/bookedrooms">Bookings</li>
-  <li>
-    <div class="icons">
-      <i class="fa-brands fa-facebook"></i>
-      <i class="fa-brands fa-instagram"></i>
-      <i class="fa-brands fa-twitter"></i>
-      <i class="fa-brands fa-whatsapp"></i>
-    </div>
-  </li>
-</ul>
-

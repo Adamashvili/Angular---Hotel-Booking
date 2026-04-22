@@ -1,4 +1,6 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { Observable } from 'rxjs';
 import { BookedService } from 'src/app/services/bookedApi.service';
 import { HotelsService } from 'src/app/services/hotelsApi.service';
@@ -8,7 +10,8 @@ import { RoomsService } from 'src/app/services/roomsApi.service';
   selector: 'app-booked-rooms',
   templateUrl: './booked-rooms.component.html',
   styleUrls: ['./booked-rooms.component.css'],
-  standalone: false,
+  standalone: true,
+  imports: [CommonModule]
 })
 export class BookedRoomsComponent implements OnInit {
   constructor(

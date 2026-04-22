@@ -1,5 +1,6 @@
+import { CommonModule } from '@angular/common';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { BookedService } from 'src/app/services/bookedApi.service';
 import { RoomsService } from 'src/app/services/roomsApi.service';
@@ -8,7 +9,8 @@ import { RoomsService } from 'src/app/services/roomsApi.service';
   selector: 'app-room-details',
   templateUrl: './room-details.component.html',
   styleUrls: ['./room-details.component.css'],
-  standalone: false,
+  standalone: true,
+  imports: [CommonModule, ReactiveFormsModule]
 })
 export class RoomDetailsComponent implements OnInit {
   constructor(

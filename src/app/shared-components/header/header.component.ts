@@ -13,4 +13,14 @@ export class HeaderComponent {
     toggleNav() {
         this.isMobileNavShown = !this.isMobileNavShown
     }
+
+    scrollTo(idLink: string) {
+        const element = document.getElementById(idLink);
+        
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+  
 }

@@ -6,14 +6,8 @@ import { HeaderComponent } from './shared-components/header/header.component';
 import { FooterComponent } from './shared-components/footer/footer.component';
 import { HomeComponent } from './routing-components/home/home.component';
 import { RoomsComponent } from './routing-components/rooms/rooms.component';
-import { HotelsComponent } from './routing-components/hotels/hotels.component';
-import { BookedRoomsComponent } from './routing-components/booked-rooms/booked-rooms.component';
 import { BannerComponent } from './routing-components/home/banner/banner.component';
-import { HomecardsComponent } from './routing-components/home/homecards/homecards.component';
-import { UspsectionComponent } from './routing-components/home/uspsection/uspsection.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RoomDetailsComponent } from './routing-components/rooms/room-details/room-details.component';
-import { RoomMoredetailsComponent } from './routing-components/rooms/room-details/room-moredetails/room-moredetails.component';
 import { OtherRoomsComponent } from './routing-components/rooms/room-details/other-rooms/other-rooms.component';
 import { NotfoundComponent } from './routing-components/notfound/notfound.component';
 import {
@@ -22,6 +16,7 @@ import {
 } from '@angular/common/http';
 import { ScrollTopDirective } from './directives/scroll-top.directive';
 import { NavScrollingDirective } from './directives/nav-scrolling.directive';
+import { HotelsComponent } from "./routing-components/hotels/hotels.component";
 
 @NgModule({
   declarations: [
@@ -30,13 +25,9 @@ import { NavScrollingDirective } from './directives/nav-scrolling.directive';
     FooterComponent,
     HomeComponent,
     RoomsComponent,
-    HotelsComponent,
-    BookedRoomsComponent,
+
     BannerComponent,
-    HomecardsComponent,
-    UspsectionComponent,
-    RoomDetailsComponent,
-    RoomMoredetailsComponent,
+
     OtherRoomsComponent,
     NotfoundComponent,
   ],
@@ -48,8 +39,9 @@ import { NavScrollingDirective } from './directives/nav-scrolling.directive';
     ReactiveFormsModule,
     ReactiveFormsModule,
     ScrollTopDirective,
-    NavScrollingDirective
-  ],
+    NavScrollingDirective,
+    HotelsComponent
+],
   providers: [provideHttpClient(withInterceptorsFromDi())],
 })
 export class AppModule {}

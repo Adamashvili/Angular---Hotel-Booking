@@ -3,23 +3,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Felipa&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap');
+
 *{
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
 }
+html {
+    scroll-behavior: smooth;
+}
 
-.mainbtn {
-    padding: 7px 25px;
-    border: none;
-    background-color: darkblue;
-    box-shadow: 0px 0px 5px  #a6babd;
-    border-radius: 8px;
-    color: white;
-    font-weight: 600;
-    transition: 0.2s all ease;
-}
-.mainbtn:hover {
-    background-color: rgb(1, 1, 187);
-    box-shadow: 0px 0px 7px  darkblue;
-}
+/*  font-family: "Castoro Titling", serif; */

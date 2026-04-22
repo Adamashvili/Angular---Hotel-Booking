@@ -1,18 +1,19 @@
 footer {
-  margin-top: 450px;
-  background-color: #272727;
+  
+  background-color: #242121;
   height: 74px;
   color: white;
   display: flex;
   align-items: center;
   font-size: 12px;
+  padding: 20px;
 }
 
 .topMark {
   position: fixed;
   bottom: -60px;
   right: 60px;
-  background-color: darkblue;
+  background-color: #242121;
   color: white;
   box-shadow: 0 0 5px 1px white;
   width: 60px;
