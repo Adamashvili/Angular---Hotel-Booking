@@ -23,7 +23,8 @@ export class HotelsComponent implements OnInit {
 
  getAllHotels() {
   this.hotelApiHttp.getHotels().subscribe({
-    next: (res) => this.hotels = res
+    next: (res) => this.hotels = res,
+    error: () => this.hotels = []
   })
  }
 

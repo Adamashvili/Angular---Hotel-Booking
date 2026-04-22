@@ -63,3 +63,10 @@ button {
 }
 
 
+
+.err {
+     font-family: "Castoro Titling", serif;
+     font-size: 20px;
+     text-shadow: 0 0 2px darkred;
+}
+
