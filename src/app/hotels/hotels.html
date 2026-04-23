@@ -1,0 +1,23 @@
+<h1 class="hotelH1"> Hotels</h1>
+
+
+      <section>
+        <div class="container"> 
+            @for (items of hotels(); track items) {
+             <div class="card" style="background-image: url({{items.featuredImage}});"> 
+              <div class="info">
+                <h1>{{items.name}}</h1>
+                <button routerLink="hotelrooms/{{items.id}}">View Rooms</button>
+              </div>
+             </div>
+              
+            }
+            @empty {
+              <h1 class="err">Internal server error...</h1>
+            }
+          </div>
+        
+
+
+
+      </section>

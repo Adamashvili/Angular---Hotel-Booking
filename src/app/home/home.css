@@ -1,0 +1,248 @@
+section {
+  min-height: 100vh;
+  background-color: #f0efe1;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-auto-rows: 400px;
+  gap: 30px;
+  padding: 30px;
+  margin-top: 70px;
+}
+
+section .left {
+  grid-row: span 2;
+  background-image: url('https://images.trvl-media.com/lodging/1000000/920000/916400/916376/3e65a896.jpg?impolicy=resizecrop&rw=1200&ra=fit');
+  background-size: cover;
+  background-position: -360px;
+}
+
+section .rightTop .texts {
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+}
+
+section .rightTop .texts h1 {
+  font-size: 90px;
+  font-style: italic;
+  font-weight: 100;
+  font-family: 'Castoro Titling', serif;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+}
+
+.btn h4 {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.btn button {
+  background-color: #242121;
+  color: white;
+  width: 170px;
+  height: 50px;
+  transition: 0.6s;
+}
+
+.btn button:hover {
+  background-color: transparent;
+  color: black;
+  border: 1px solid black;
+}
+
+section .rightBottom {
+  background-size: cover;
+  background-image: url('https://static.wixstatic.com/media/11062b_24e2ef5dd06d4088b25c8f45a43046d8~mv2.jpg/v1/fill/w_1920,h_783,al_c,q_85,enc_avif,quality_auto/11062b_24e2ef5dd06d4088b25c8f45a43046d8~mv2.jpg');
+}
+
+main {
+  background-color: #242121;
+  padding: 60px 20px;
+  color: white;
+}
+
+main h1 {
+  font-family: 'Castoro Titling', serif;
+  font-size: 50px;
+  letter-spacing: 2px;
+  font-style: italic;
+  margin: 60px 0;
+}
+
+.experiences ul li {
+  border-top: 2px solid white;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2.5fr;
+  grid-auto-rows: 150px;
+  padding-top: 20px;
+}
+
+.experiences ul li h4:first-child {
+  font-style: italic;
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: 1px;
+}
+
+li h4 {
+  font-weight: 400;
+}
+
+.experiences button {
+  display: block;
+  margin-left: auto;
+  width: 160px;
+  height: 50px;
+  background-color: #f0efe1;
+  border: 1px solid #242121;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.experiences button:hover {
+  background-color: #242121;
+  color: white;
+  border: #f0efe1 1px solid;
+}
+
+.expBottom .info {
+  width: 50%;
+}
+
+.expBottom img {
+  display: block;
+  width: 55%;
+  margin-left: auto;
+  margin-top: 50px;
+}
+
+/* Luxury Area */
+
+.cardsArea {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 60px;
+  padding-bottom: 80px;
+}
+
+.cardsArea.top {
+  border-bottom: 1px solid white !important;
+}
+
+.cardsArea .card {
+  width: 170px;
+  height: 170px;
+  background-color: #f0efe1;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  text-align: center;
+  font-size: 17px;
+  padding: 10px;
+  margin: 15px;
+}
+
+.cardsArea .card i {
+  font-size: 30px;
+  text-shadow: 0 0 1.5px black;
+}
+
+.cardsArea .card p {
+  font-family: 'Castoro Titling', serif;
+  font-weight: 400;
+  text-shadow: 0 0 1.2px black;
+}
+
+/* guest Stories */
+
+.guests {
+  padding: 20px;
+}
+.guests h1 {
+  font-family: 'Castoro Titling', serif;
+  font-size: 50px;
+  letter-spacing: 2px;
+  font-style: italic;
+  margin: 60px 0;
+}
+
+.guests ul {
+  width: 60%;
+  margin-left: auto;
+}
+
+.guests ul li {
+  list-style: none;
+  border-top: 1px solid black;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.guests ul li p:nth-child(1) {
+  font-size: 18px;
+  width: 60%;
+}
+.guests ul li p:nth-child(2) {
+  text-align: end;
+  font-family: 'Castoro Titling', serif;
+  font-size: 18px;
+}
+
+@media (max-width: 1000px) {
+  section {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 200px;
+    height: auto;
+  }
+
+  section .rightTop .texts h1 {
+    font-size: 30px;
+  }
+
+  section .left {
+    background-position: center;
+  }
+
+  .rightBottom {
+    background-color: white !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .experiences ul li {
+    font-size: 15px;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    text-align: center;
+    grid-auto-rows: auto;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .expBottom .info {
+    width: 50%;
+  }
+
+  .expBottom img {
+    width: 100%;
+  }
+
+
+  .guests ul {
+  width: 100%;
+  font-size: 15px;
+}
+}
