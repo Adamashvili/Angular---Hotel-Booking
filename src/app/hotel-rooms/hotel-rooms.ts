@@ -3,10 +3,11 @@ import { ApiLinks } from '../api-links';
 import { ActivatedRoute, Params } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Filterform } from './filterform/filterform';
+import { RoomDetails } from './room-details/room-details';
 
 @Component({
   selector: 'app-hotel-rooms',
-  imports: [CommonModule, Filterform],
+  imports: [CommonModule, Filterform, RoomDetails],
   templateUrl: './hotel-rooms.html',
   styleUrl: './hotel-rooms.css',
 })
@@ -21,6 +22,8 @@ export class HotelRooms {
   hotelData = signal<any>({});
   hotelRooms = signal<any[]>([]);
   errText = signal<string>('');
+  roomToShow = signal<any>({})
+  isRoomShow:boolean = false
 
   getHotelRooms() {
     this.actR.params.subscribe((data: Params) => {
@@ -41,14 +44,11 @@ export class HotelRooms {
 
     if (dataFiltered == '') {
       this.getHotelRooms();
-      console.log(1);
     } else if (!dataFiltered.statusText) {
       this.hotelRooms.set(dataFiltered);
       this.errText.set('');
-      console.log(2);
     } else {
       this.errText.set(dataFiltered.statusText);
-      console.log(3);
 
       setTimeout(() => {
         this.errText.set('');

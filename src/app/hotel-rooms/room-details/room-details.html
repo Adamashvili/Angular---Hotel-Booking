@@ -1,0 +1,26 @@
+<main>
+  <div class="details">
+    <i (click)="closeEmit.emit(false)" class="fa-solid fa-x"></i>
+    <div class="gallery">
+      <aside>
+        @for (item of roomDetails.images; track $index) {
+          <img [class.current]="currentImage == $index " (click)="currentImage = $index" [src]="item.source" alt="" />
+        }
+      </aside>
+      <img [src]="roomDetails.images[currentImage].source" alt="" />
+    </div>
+    <div class="info">
+      <h1> {{roomDetails.name}} </h1>
+      <p>
+        {{roomDetails.name}} dolor sit amet consectetur, adipisicing elit. Exercitationem rem quae quas
+        suscipit accusamus natus nobis quaerat. Veniam praesentium, odio nemo amet quas nam expedita
+        quia, et sed dolores provident soluta quibusdam quasi. Tempore ullam id veritatis, libero
+        perferendis ipsam recusandae. Excepturi enim incidunt, sint facilis repellendus quo adipisci
+        amet distinctio. Molestias velit quidem inventore dolor fuga consequuntur necessitatibus
+        earum!
+      </p>
+      <h5>Price Per Night: <span>{{roomDetails.pricePerNight | currency }}</span>  </h5>
+      <button>BOOK NOW</button>
+    </div>
+  </div>
+</main>

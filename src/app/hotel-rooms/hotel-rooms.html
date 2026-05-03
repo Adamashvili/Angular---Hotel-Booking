@@ -5,11 +5,12 @@
       <h4>{{ hotelData().address }}</h4>
     </div>
   </section>
- 
+
   <app-filterform (dataTransferer)="bringFilteredData($event)"></app-filterform>
- @if (errText()) {<h1 class="errText"> {{errText()}} </h1>} 
+  @if (errText()) {
+    <h1 class="errText">{{ errText() }}</h1>
+  }
   <section class="container">
-    
     @for (item of hotelRooms(); track $index) {
       <div class="card">
         <img [src]="item.images[0].source" alt="" />
@@ -19,15 +20,17 @@
             <h5>{{ item.pricePerNight | currency }}</h5>
           </div>
           <div class="details">
-            <button>View Images</button>
+            <button (click)="isRoomShow = true; roomToShow = item">View Images</button>
             <button>Book Now</button>
           </div>
         </div>
       </div>
-    }
-    @empty {
-      
+    } @empty {
       <h1 class="empty">There Are No Rooms In This Category</h1>
     }
   </section>
 </main>
+
+@if (isRoomShow) {
+  <app-room-details [roomDetails]="roomToShow" (closeEmit)="isRoomShow = $event"></app-room-details>
+}
