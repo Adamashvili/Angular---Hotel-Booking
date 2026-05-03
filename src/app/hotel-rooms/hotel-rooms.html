@@ -1,0 +1,33 @@
+<main>
+  <section class="banner" [style.background-image]="'url(' + hotelData().featuredImage + ')'">
+    <div class="info">
+      <h1>{{ hotelData().name }}</h1>
+      <h4>{{ hotelData().address }}</h4>
+    </div>
+  </section>
+ 
+  <app-filterform (dataTransferer)="bringFilteredData($event)"></app-filterform>
+ @if (errText()) {<h1 class="errText"> {{errText()}} </h1>} 
+  <section class="container">
+    
+    @for (item of hotelRooms(); track $index) {
+      <div class="card">
+        <img [src]="item.images[0].source" alt="" />
+        <div class="bottom">
+          <div class="texts">
+            <h3>{{ item.name }}</h3>
+            <h5>{{ item.pricePerNight | currency }}</h5>
+          </div>
+          <div class="details">
+            <button>View Images</button>
+            <button>Book Now</button>
+          </div>
+        </div>
+      </div>
+    }
+    @empty {
+      
+      <h1 class="empty">There Are No Rooms In This Category</h1>
+    }
+  </section>
+</main>

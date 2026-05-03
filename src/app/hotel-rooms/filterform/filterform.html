@@ -1,0 +1,44 @@
+ <form [formGroup]="filterForm" (ngSubmit)="filterRooms()">
+    <h4>Choose your favourite rooms</h4>
+    <div class="allFields">
+      <div class="field">
+        <label for="">Price From</label>
+        <input type="number" formControlName="priceFrom"/>
+        <small>This field is required <i class="fa-solid fa-circle-info"></i></small>
+      </div>
+      <div class="field">
+        <label for="">Price To</label>
+        <input type="number" formControlName="priceTo"/>
+        <small>This field is required <i class="fa-solid fa-circle-info"></i></small>
+      </div>
+      <div class="field">
+        <label for="">Room Type</label>
+        <select formControlName="roomTypeId">
+          <option  value="">Select Room</option>
+          @for (item of roomTypes(); track $index) {
+            <option [value]="item.id">{{ item.name }}</option>
+          }
+        </select>
+        <small>This field is required <i class="fa-solid fa-circle-info"></i></small>
+      </div>
+      <div class="field">
+        <label for="">Check In</label>
+        <input type="date" formControlName="checkIn"/>
+        <small>This field is required <i class="fa-solid fa-circle-info"></i></small>
+      </div>
+      <div class="field">
+        <label for="">Check Out</label>
+        <input type="date" formControlName="checkOut"/>
+        <small>This field is required <i class="fa-solid fa-circle-info"></i></small>
+      </div>
+      <div class="field">
+        <label for="">Maximum Guests</label>
+        <input type="number" min="1" max="5" formControlName="maximumGuests" />
+        <small>Enter guest numbers up to 5 <i class="fa-solid fa-circle-info"></i></small>
+      </div>
+      <div class="field">
+        <button [disabled]="filterForm.invalid" type="submit">Search</button>
+        <button (click)="dataTransferer.emit('')" type="reset">Reset</button>
+      </div>
+    </div>
+  </form>

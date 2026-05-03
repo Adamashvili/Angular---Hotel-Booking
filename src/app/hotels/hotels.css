@@ -37,11 +37,12 @@
     backdrop-filter: blur(5px) brightness(50%);
     color: white;
     opacity: 0;
+    padding: 20px;
     
 }
 
 .info h1 {
-    font-family: "Marck Script", cursive;
+    font-family: 'Castoro Titling', serif;
 }
 
 

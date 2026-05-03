@@ -15,6 +15,10 @@ export class ApiLinks {
     return this.http.get(`https://hotelbooking.stepprojects.ge/api/Hotels/GetHotel/${id}`);
   }
 
+  getRoomTypes() {
+    return this.http.get("https://hotelbooking.stepprojects.ge/api/Rooms/GetRoomTypes")
+  }
+
   filteredRooms(body: any) {
     return this.http.post('https://hotelbooking.stepprojects.ge/api/Rooms/GetFiltered', body);
   }
