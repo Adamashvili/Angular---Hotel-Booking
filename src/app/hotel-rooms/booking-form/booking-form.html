@@ -1,0 +1,38 @@
+<form [formGroup]="bookForm" (ngSubmit)="bookRoom()">
+  <h4 type="button" (click)="closeEmit.emit(false)" class="closeBtn">&larr;</h4>
+  <img src="https://img.pikbest.com/origin/09/34/43/59SpIkbEsTpiB.png!w700wp" alt="" />
+  <h1>Reserve Your Stay</h1>
+  <div class="field">
+    <label for="in">Check In</label>
+    <input formControlName="checkInDate" type="date" id="in" [min]="today" />
+    <small>Please enter this field <i class="fa-solid fa-info"></i> </small>
+  </div>
+  <div class="field">
+    <label for="out">Check Out</label>
+    <input formControlName="checkOutDate" type="date" id="out" [min]="today" />
+    <small>Please enter this field <i class="fa-solid fa-info"></i> </small>
+    @if (
+      bookForm.value.checkInDate >= bookForm.value.checkOutDate &&
+      bookForm.get('checkOutDate')?.dirty
+    ) {
+      <p>Check Out Date must be in future <i class="fa-solid fa-info"></i></p>
+    }
+  </div>
+  <div class="field">
+    <label for="name">Customer Name</label>
+    <input formControlName="customerName" type="text" id="name" />
+    <small>Please enter this field <i class="fa-solid fa-info"></i> </small>
+  </div>
+  <div class="field">
+    <label for="phone">Customer Phone</label>
+    <input formControlName="customerPhone" type="text" id="phone" />
+    <small>Please enter this field <i class="fa-solid fa-info"></i> </small>
+  </div>
+  <button
+    [disabled]="bookForm.invalid || bookForm.value.checkInDate >= bookForm.value.checkOutDate"
+    type="submit"
+  >
+    BOOK YOUR ROOM
+  </button>
+  <h2 #smsH2 class="bookInfoSMS">{{ bookSMS() }}</h2>
+</form>

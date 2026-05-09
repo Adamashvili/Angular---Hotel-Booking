@@ -22,4 +22,8 @@ export class ApiLinks {
   filteredRooms(body: any) {
     return this.http.post('https://hotelbooking.stepprojects.ge/api/Rooms/GetFiltered', body);
   }
+
+  bookRoom(info: any) {
+    return this.http.post("https://hotelbooking.stepprojects.ge/api/Booking", info, {responseType: "text"})
+  }
 }

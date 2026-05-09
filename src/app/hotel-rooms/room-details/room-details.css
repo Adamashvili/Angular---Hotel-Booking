@@ -1,116 +1,173 @@
 main {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: brightness(10%) blur(2px);
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: brightness(10%) blur(2px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .details {
-    width: 80%;
-    background-color: #0c0c0c;
-    height: 82%;
-    display: flex;
-    padding: 25px;
-    gap: 20px;
-    position: relative;
+  width: 80%;
+  background-color: #0c0c0c;
+  min-height: 82%;
+  display: flex;
+  padding: 25px;
+  gap: 20px;
+  position: relative;
 }
 
-
 .gallery {
-    flex: 2;
-    display: flex;
-    justify-content: space-between;
-    
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
 }
 
 .fa-x {
-    color: white;
-    position: absolute;
-    right: 20px;
-    font-size: 25px;
-    cursor: pointer;
-    transition: 0.2s;
+  color: white;
+  position: absolute;
+  right: 20px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.2s;
+  z-index: 9;
 }
 
 .fa-x:hover {
-    color: darkred;
+  color: #ebe480;
 }
 
 aside {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
 }
 
-
-
 aside img {
-    width: 120px;
-    height: 100px;
-    object-fit: cover;
-    cursor: pointer;
-    border-radius: 5px;
+  flex: 1;
+  height: 80px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .current {
-    border: 1.5px solid #f6f19d;
-    box-shadow: 0 0 5px #f6f19d;
+  border: 1.5px solid #f6f19d;
+  box-shadow: 0 0 5px #f6f19d;
 }
 
 .gallery > img {
-    width: calc(100% - 140px);
-    height: 100%;
-    object-fit: cover;
+  width: calc(100% - 140px);
+  height: 100%;
+  object-fit: cover;
 }
 
 .info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    gap: 50px;
-    color: white;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 50px;
+  color: white;
+  position: relative;
 }
 
 .info h1 {
-    font-family: 'Castoro Titling', serif;
-    color: #f6f19d;
+  font-family: 'Castoro Titling', serif;
+  color: #f6f19d;
 }
 
-.info p, .info h5 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.info p,
+.info h5 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
 
 .info h5 {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 h5 span {
-    color: #f6f19d;
+  color: #f6f19d;
 }
 
-
 .info button {
-    width: 200px;
-    height: 40px;
-    background-color: #f0efe1;
-    border: none;
-    text-shadow: 0 0 0.5px black;
-    letter-spacing: 1px;
-    font-family: 'Castoro Titling', serif;
-    cursor: pointer;
-    transition: 0.3s;
+  width: 200px;
+  height: 40px;
+  background-color: #f0efe1;
+  border: none;
+  text-shadow: 0 0 0.5px black;
+  letter-spacing: 1px;
+  font-family: 'Castoro Titling', serif;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .info button:hover {
-    background-color: #f6f19d;
+  background-color: #f6f19d;
+}
+
+/* form */
+
+.formArea {
+  position: absolute;
+  background-color: #151414;
+  width: 100%;
+  height: 90%;
+  bottom: 0;
+  z-index: 10;
+}
+
+@media (max-width: 1150px) {
+  .details {
+    flex-direction: column;
+    transform: scale(0.8);
+  }
+
+  .gallery {
+    height: 50%;
+    flex-direction: column-reverse;
+    gap: 20px;
+    align-items: center;
+  }
+
+  aside {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  aside img {
+    max-width: 80px;
+  }
+
+  .info {
+    height: 50%;
+  }
+
+  .formArea {
+    top: -100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .details {
+    height: 100%;
+  }
+
+  aside img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .info {
+    gap: 10px;
+  }
 }

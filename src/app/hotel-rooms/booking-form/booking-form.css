@@ -1,0 +1,167 @@
+form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  justify-content: space-evenly;
+  position: relative;
+  
+}
+
+form .closeBtn {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 20px;
+  border-radius: 0 0 10px 0;
+  background-color: #ebe480;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: bold;
+  font-family: 'Castoro Titling', serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+form img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  top: -40px;
+  box-shadow: 0 0 5px white;
+}
+
+form h1 {
+  font-family: 'Castoro Titling', serif;
+  letter-spacing: 1px;
+  text-shadow: 0 0 3.5px white;
+  color: #ebe480;
+  margin-top: 5px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+  position: relative;
+}
+
+.field input {
+  height: 45px;
+  width: 100%;
+  padding: 10px;
+  border: 0.5px solid grey;
+  outline: none;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgb(42, 42, 42);
+  color: white;
+}
+
+.field input.ng-invalid.ng-touched {
+  border: 0.5px solid darkred;
+  box-shadow: 0 0 7px 2px darkred inset;
+}
+
+.field input.ng-invalid.ng-touched + small {
+  visibility: visible;
+}
+
+.field small {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  font-size: 12px;
+  color: darkred;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 0 0 1.5px red;
+  visibility: hidden;
+}
+
+.field p {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  font-size: 12px;
+  color: darkred;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 0 0 1.5px red;
+}
+
+::-webkit-calendar-picker-indicator {
+  background-color: rgb(70, 70, 70);
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.field label {
+  font-family: 'Castoro Titling', serif;
+  font-weight: 600;
+}
+
+form button {
+  width: 60%;
+  height: 40px;
+  align-self: flex-end;
+  background-color: #ebe480;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: bold;
+  font-family: 'Castoro Titling', serif;
+}
+
+form button:disabled {
+  background-color: black;
+  color: white;
+  box-shadow: 0 0 2px white;
+  border-radius: 4px;
+  cursor: default;
+}
+
+form button:disabled:hover {
+  background-color: rgb(52, 52, 52);
+}
+
+form button:hover {
+  background-color: #f4f2c2;
+}
+
+.bookInfoSMS {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  color: black;
+  height: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+  font-family: 'Castoro Titling', serif;
+  padding: 10px;
+  text-align: center;
+}
+
+.goodBook {
+  background-color: #ebe480;
+  color: black;
+  font-size: 11px;
+  box-shadow: 0 -30px 50px 25px black;
+  height: 35px;
+}
+
+.wrongBook {
+  background-color: darkred;
+  color: white;
+  font-size: 9px;
+  box-shadow: 0 -30px 50px 25px rgb(83, 0, 0);
+  height: 30px;
+}
