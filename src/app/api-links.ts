@@ -26,4 +26,12 @@ export class ApiLinks {
   bookRoom(info: any) {
     return this.http.post("https://hotelbooking.stepprojects.ge/api/Booking", info, {responseType: "text"})
   }
+
+  getBookedRooms() {
+    return this.http.get("https://hotelbooking.stepprojects.ge/api/Booking")
+  }
+
+  cancelBooking(id:number) {
+    return this.http.delete(`https://hotelbooking.stepprojects.ge/api/Booking/${id}` ,{responseType: "text"})
+  }
 }

@@ -1,1 +1,19 @@
-<p>booked-rooms works!</p>
+     <h4 #sms class="sms">Booking canceled successfully. Booking Id 20079</h4>
+
+<section>
+  @for (item of bookedRoomList(); track $index) {
+    <div class="card">
+      <p>Customer Name</p>
+      <h5>{{ item.customerName }}</h5>
+      <p>Customer Phone</p>
+      <h5>{{ item.customerPhone }}</h5>
+      <p>Book Date</p>
+      <h5>From: {{ item.checkInDate | date }} - To: {{ item.checkOutDate | date }}</h5>
+      <h6>Total: {{ item.totalPrice | currency }}</h6>
+      <div class="details">
+        <button (click)="removeBooking(item.id)">Cancel Booking</button>
+       
+      </div>
+    </div>
+  }
+</section>
